@@ -1,0 +1,84 @@
+/* Custom Styles */
+:root {
+    --primary-color: #673ab7; /* Deep Purple */
+    --secondary-color: #26a69a; /* Teal */
+    --accent-color: #ffa726; /* Orange */
+    --background-color: #f5f5f5; /* Light Gray */
+    --text-color: #212121; /* Dark Gray */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+.nav-wrapper {
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Gig Cards */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.card .budget {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+.page-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.page-footer h5 {
+    margin-bottom: 20px;
+}
+
+.page-footer p {
+    font-size: 0.9rem;
+}
