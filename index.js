@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Insert gig into Supabase
         const { data, error } = await _supabase
-            .from('gigs')
+            .from('gigz')
             .insert([{ title: gigTitle, description: gigDescription, location: gigLocation, budget: gigBudget }])
             .select();
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to fetch gigs from Supabase
 async function fetchGigs() {
     const { data, error } = await _supabase
-        .from('gigs')
+        .from('gigz')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -122,7 +122,7 @@ function createGigCard(title, description, location, budget) {
 
 // Subscribe to real-time updates
 _supabase
-    .channel('gigs')
+    .channel('gigz')
     .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'gigs' }, (payload) => {
         // Add the new gig to the UI
         const gigCard = createGigCard(payload.new.title, payload.new.description, payload.new.location, payload.new.budget);
